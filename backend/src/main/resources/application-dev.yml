@@ -1,0 +1,42 @@
+spring:
+  # 1. Cấu hình Email
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  # 2. Cấu hình PostgreSQL (Sửa lại từ dạng properties sang yaml)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${POSTGRES_DB}
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # 3. Tắt Flyway để tránh lỗi lúc khởi động nếu DB chưa chuẩn
+  flyway:
+    enabled: false
+
+  # 4. Cấu hình MongoDB và Redis
+  data:
+    mongodb:
+      # Sửa lại URI: dùng biến môi trường để đồng bộ và trỏ về localhost
+      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@localhost:27017/${MONGO_DB}?authSource=admin
+    redis:
+      host: localhost
+      port: 6379
+      password: ${REDIS_PASSWORD}

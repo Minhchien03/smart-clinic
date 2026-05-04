@@ -1,0 +1,33 @@
+# env
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# build
+backend/target/
+*.class
+*.jar
+
+# logs
+*.log
+
+# OS
+.DS_Store
+
+# data
+backend/postgres-data/
+backend/init-db/
+
+# optional
+archiecture.md
+
+# plan 
+SMART CLINIC PLATFORM.docx
+
+.antigravityignore
+V1__Create_users_and_profiles_table.sql
+
+ReadmeBE.md
