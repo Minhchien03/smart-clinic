@@ -1,4 +1,4 @@
-package com.smartclinic.entity;
+package com.smartclinic.models.auth.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

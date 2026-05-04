@@ -1,8 +1,9 @@
-package com.smartclinic.service;
+package com.smartclinic.models.auth.service;
 
-import com.smartclinic.dto.RegisterRequest;
-import com.smartclinic.entity.User;
-import com.smartclinic.repository.UserRepository;
+import com.smartclinic.models.auth.dto.RegisterRequest;
+import com.smartclinic.models.auth.entity.User;
+import com.smartclinic.models.auth.repository.UserRepository;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.UUID;

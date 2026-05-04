@@ -1,4 +1,4 @@
-package com.smartclinic.entity;
+package com.smartclinic.models.auth.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

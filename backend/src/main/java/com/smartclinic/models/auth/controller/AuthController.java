@@ -1,9 +1,9 @@
 // Khai báo package chứa file
-package com.smartclinic.controller;
+package com.smartclinic.models.auth.controller;
 
-// Import các class Data Transfer Object, Service và thư viện cần thiết của Spring Web
-import com.smartclinic.dto.RegisterRequest;
-import com.smartclinic.service.AuthService;
+import com.smartclinic.models.auth.dto.RegisterRequest;
+import com.smartclinic.models.auth.service.AuthService;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

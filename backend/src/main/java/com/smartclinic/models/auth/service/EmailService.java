@@ -1,4 +1,4 @@
-package com.smartclinic.service;
+package com.smartclinic.models.auth.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
@@ -9,7 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 
 // Đánh dấu đây là Service trong Spring
 @Service
-// Annotation Lombok để tự động tạo constructor cho các thuộc tính final (JavaMailSender)
+// Annotation Lombok để tự động tạo constructor cho các thuộc tính final
+// (JavaMailSender)
 @RequiredArgsConstructor
 @Slf4j
 public class EmailService {
@@ -22,12 +23,13 @@ public class EmailService {
         try {
             // Khởi tạo đối tượng tin nhắn email cơ bản
             SimpleMailMessage message = new SimpleMailMessage();
-            
+
             // Cấu hình người nhận, tiêu đề và nội dung email
             message.setTo(to);
             message.setSubject("Xác thực tài khoản Smart Clinic");
-            message.setText("Vui lòng click vào link để xác thực: http://localhost:8080/api/v1/auth/verify?token=" + token);
-            
+            message.setText(
+                    "Vui lòng click vào link để xác thực: http://localhost:8080/api/v1/auth/verify?token=" + token);
+
             log.debug("Nội dung email xác thực cho {}: {}", to, message.getText());
 
             // Thực thi gửi email

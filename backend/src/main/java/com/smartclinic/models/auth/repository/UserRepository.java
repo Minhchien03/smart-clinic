@@ -1,9 +1,9 @@
-package com.smartclinic.repository;
+package com.smartclinic.models.auth.repository;
 
-// Import Entity User và các class của Spring Data JPA
-import com.smartclinic.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.smartclinic.models.auth.entity.User;
 
 import java.util.Optional;
 import java.util.UUID;
